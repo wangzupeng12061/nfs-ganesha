@@ -1,0 +1,98 @@
+# 测试时需要根据客户端数量调整hd、sd，以及sd中的range
+hd=default,vdbench=/root/vdbench50406,user=root,shell=ssh
+hd=h1,system=100.7.46.29
+hd=h2,system=100.7.46.30
+hd=h3,system=100.7.46.31
+hd=h4,system=100.7.46.32
+hd=h5,system=100.7.46.33
+hd=h6,system=100.7.46.34
+hd=h7,system=100.7.46.35
+hd=h8,system=100.7.46.36
+hd=h9,system=100.7.46.41
+hd=h10,system=100.7.46.42
+hd=h11,system=100.7.46.43
+hd=h12,system=100.7.46.44
+hd=h13,system=100.7.46.45
+hd=h14,system=100.7.46.46
+hd=h15,system=100.7.46.47
+hd=h16,system=100.7.46.48
+
+# 设置：线程数
+sd=default,threads=128
+
+# 边属性文件
+# 测试规模:
+#   344.75  TB: size=250t
+#   109.875 TB: size=62.5t
+#   35.375  TB: size=25t
+#   3.1875  TB: size=1.25t
+#   35.375  GB: size=25g
+#   3.1875  GB: size=1.25g
+sd=sd1,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(0,6.25),host=h1
+sd=sd2,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(6.25,12.5),host=h2
+sd=sd3,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(12.5,18.75),host=h3
+sd=sd4,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(18.75,25),host=h4
+sd=sd5,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(25,31.25),host=h5
+sd=sd6,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(31.25,37.5),host=h6
+sd=sd7,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(37.5,43.75),host=h7
+sd=sd8,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(43.75,50),host=h8
+sd=sd9,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(50,56.25),host=h9
+sd=sd10,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(56.25,62.5),host=h10
+sd=sd11,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(62.5,68.75),host=h11
+sd=sd12,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(68.75,75),host=h12
+sd=sd13,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(75,81.25),host=h13
+sd=sd14,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(81.25,87.5),host=h14
+sd=sd15,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(87.5,93.75),host=h15
+sd=sd16,lun=/mnt/cephfs/graph/test.graph.edge.props,openflags=o_sync,size=62.5t,range=(93.75,100),host=h16
+
+# 顶点属性文件
+# 测试规模:
+#   344.75  TB: size=1t
+#   109.875 TB: size=512g
+#   35.375  TB: size=1t
+#   3.1875  TB: size=1t
+#   35.375  GB: size=1g
+#   3.1875  GB: size=1g
+sd=sd17,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(0,6.25),host=h1
+sd=sd18,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(6.25,12.5),host=h2
+sd=sd19,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(12.5,18.75),host=h3
+sd=sd20,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(18.75,25),host=h4
+sd=sd21,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(25,31.25),host=h5
+sd=sd22,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(31.25,37.5),host=h6
+sd=sd23,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(37.5,43.75),host=h7
+sd=sd24,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(43.75,50),host=h8
+sd=sd25,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(50,56.25),host=h9
+sd=sd26,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(56.25,62.5),host=h10
+sd=sd27,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(62.5,68.75),host=h11
+sd=sd28,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(68.75,75),host=h12
+sd=sd29,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(75,81.25),host=h13
+sd=sd30,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(81.25,87.5),host=h14
+sd=sd31,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(87.5,93.75),host=h15
+sd=sd32,lun=/mnt/cephfs/graph/test.graph.vertex.props,openflags=o_sync,size=512g,range=(93.75,100),host=h16
+
+# 定义工作负载
+
+# 阶段一（图生成）：顺序写入边属性文件、顶点属性文件
+wd=wd1,sd=(sd1-sd16),rdpct=0,seekpct=0,xfersize=256m
+wd=wd2,sd=(sd17-sd32),rdpct=0,seekpct=0,xfersize=256m
+
+# 阶段三（子图生成）：随机读取边属性文件和顶点属性文件
+wd=wd3,sd=(sd1-sd16),rdpct=100,seekpct=100,xfersize=32k
+wd=wd4,sd=(sd17-sd32),rdpct=100,seekpct=100,xfersize=256k
+
+# 设置运行配置
+rd=default,iorate=max,interval=1,warmup=60
+
+# 阶段一（图生成）
+# 设置：写边属性文件的停止条件
+rd=rd1,wd=wd1,maxdata=62.5t,format=restart,elapsed=48h
+
+# 设置：写顶点属性文件的停止条件
+rd=rd2,wd=wd2,maxdata=512g,format=restart,elapsed=48h
+
+# 阶段三（子图生成）
+# 设置：读边属性文件的停止条件
+rd=rd3,wd=wd3,maxdata=62.5t,format=restart,elapsed=600
+
+# 设置：读顶点属性文件的停止条件
+rd=rd4,wd=wd4,maxdata=512g,format=restart,elapsed=600
